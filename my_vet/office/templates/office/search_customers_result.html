@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    {% if search_cust %}
+    <h1>You searched for {{ search_cust }}</h1>
+    <br/>
+    {% for cust in customers %}
+       <a href ="{% url 'office:details' cust.id %}"> {{ cust }}<br/></a>
+
+    {% endfor %}
+
+    {% else %}
+    <h1>You forgot to search for a customer!</h1>
+
+    {% endif %}
+    
+</body>
+</html>
