@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All The Customer</title>
-</head>
-<body>
+{% extends 'office/base.html' %}
+    
+    {% block title %}All The Customer{% endblock title %}
+
+    {% block content %}
     <h1>Customers</h1>
 
     <ul>
@@ -16,5 +12,13 @@
           <!--  <li><a href="office/details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>-->
         
     </ul>
-</body>
-</html>
+    <button onclick="myFunction()">Do not click!</button>
+
+    <script>
+        
+        function myFunction() {
+          alert("I asked you not to click this!");
+        }
+            </script>
+    {% endblock content %}
+
