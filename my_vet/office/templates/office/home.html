@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runshaw Vet</title>
+</head>
+<body>
+    <h1>Welcome to the Runshaw vet</h1>
+
+    <form method=POST action="{% url 'office:search_customers_result' %}">
+        {% csrf_token %}
+        <p>
+        <label for="search_cust">Search</label><br>
+        <input type="search" id="search_cust" name="search_cust" placeholder="search customers">
+        </p>  
+        <input type="submit" value="Submit">
+    </form>
+    <br />
+    <form action="" method="get">
+        <label for="username">Enter your name: </label>
+        <input id="username" type="text" name="username">
+        <input type="submit" value="say hello">
+    </form>
+</body>
+</html>

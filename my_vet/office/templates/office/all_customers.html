@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All The Customer</title>
+</head>
+<body>
+    <h1>Customers</h1>
+
+    <ul>
+        {% for x in vetcustomers %}
+        <li><a href="{% url 'office:details' x.id %}">{{ x.firstname }} {{ x.lastname }}</a></li>
+        {% endfor %}
+          <!--  <li><a href="office/details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>-->
+        
+    </ul>
+</body>
+</html>
