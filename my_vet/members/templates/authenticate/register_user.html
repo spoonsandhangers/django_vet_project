@@ -1,0 +1,29 @@
+{% extends 'office/base.html' %}
+
+{% block title %}Register Page{% endblock title %}
+
+
+    {% block content %}
+    <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    {% if form.errors %}
+    <p>There was an error with your form</p>
+
+    {% endif %}
+    
+    <h1>Register</h1>
+    <form action="{% url 'members:register_user' %}" method="POST">
+        {% csrf_token %}  
+
+        {{ form.as_p }}
+              
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+                
+    </form>
+            
+
+
+    
+
+
+    {% endblock content %}
